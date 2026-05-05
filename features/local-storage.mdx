@@ -1,0 +1,81 @@
+---
+title: 'Local Storage — Private, On-Device Data Persistence'
+description: 'Learn how GastoClaro saves your expense data directly in your browser using localStorage, what that means for privacy, and what limitations to expect.'
+---
+
+GastoClaro saves your expense data directly in your browser using a browser feature called localStorage. This means your expenses are stored on your device — not on any external server — and are available every time you open the app. No account, no sign-up, and no internet connection are required for the app to remember your data.
+
+## What localStorage means
+
+localStorage is a storage area built into every modern web browser. When GastoClaro writes an expense to localStorage, that data lives in a small file managed by your browser on your local device. The app reads from that file each time the page loads, so your expense list is exactly where you left it.
+
+<Info>
+  Because data is stored locally, GastoClaro works entirely offline after the initial page load. You can add, delete, and view expenses without an internet connection.
+</Info>
+
+## When data is saved
+
+GastoClaro writes to localStorage automatically — you never need to click a Save button. Your data is updated:
+
+- **After adding an expense** — the new entry is persisted to localStorage immediately when you submit the form.
+- **After deleting an expense** — the updated list is written back to localStorage as soon as the entry is removed.
+
+## When data is loaded
+
+GastoClaro reads from localStorage as soon as the page loads. This means:
+
+- Refreshing the page restores your full expense list.
+- Closing and reopening the browser tab restores your data.
+- Coming back to the app days or weeks later shows all previously recorded expenses.
+
+No action on your part is required. The load happens automatically in the background before the page finishes rendering.
+
+## Privacy benefits
+
+Because your data never leaves your device, GastoClaro offers strong privacy by default:
+
+- No company, server, or third party can access your expense records.
+- No account credentials are required or stored.
+- Your financial data is not transmitted over the network at any point.
+
+This makes GastoClaro a good choice for people who want to track personal spending without sharing that information with an external service.
+
+## Limitations to be aware of
+
+localStorage is convenient, but it comes with trade-offs you should understand before relying on it.
+
+<AccordionGroup>
+  <Accordion title="Data is tied to a single browser" icon="browser">
+    localStorage is scoped to the specific browser and browser profile you use. If you record expenses in Firefox and then open GastoClaro in Chrome, you will see an empty expense list in Chrome. The two browsers maintain separate localStorage areas and do not share data.
+  </Accordion>
+  <Accordion title="Data is tied to a single device" icon="laptop">
+    Your expense data exists only on the device where it was created. If you switch to a different computer, phone, or tablet, that device starts with no expense history.
+  </Accordion>
+  <Accordion title="Clearing browser data deletes your expenses" icon="trash">
+    When you clear your browser's cache, cookies, or site data — whether manually or through a browser setting — localStorage is wiped along with it. Your GastoClaro expense history is permanently deleted and cannot be recovered.
+  </Accordion>
+  <Accordion title="Private or incognito browsing does not persist" icon="eye-off">
+    If you use GastoClaro in a private or incognito browser window, localStorage is cleared automatically when you close that window. Any expenses you record in private mode will not be available the next time you open the app.
+  </Accordion>
+</AccordionGroup>
+
+<Warning>
+  Switching to a different browser or device means starting with a completely empty expense list. GastoClaro currently has no built-in export or import tool to move data between browsers or devices. Plan your usage accordingly — pick one browser on one device and use it consistently.
+</Warning>
+
+## Future: cloud sync with Plan Plus
+
+The current version of GastoClaro stores data locally only. A planned **Plan Plus** tier will introduce optional cloud sync, allowing your expense data to follow you across browsers and devices. This feature is not available in the MVP but is on the product roadmap.
+
+<Note>
+  Cloud sync will be opt-in. The local-only, no-account model will remain available for users who prefer to keep their data entirely on their own device.
+</Note>
+
+<CardGroup cols={2}>
+  <Card title="Expense tracking" icon="receipt" href="/features/expense-tracking">
+    Learn how to add and delete expenses that are saved to localStorage.
+  </Card>
+  <Card title="Data visualization" icon="chart-pie" href="/features/data-visualization">
+    See how your persisted expenses are turned into a monthly summary and chart.
+  </Card>
+</CardGroup>

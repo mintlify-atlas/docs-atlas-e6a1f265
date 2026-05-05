@@ -1,0 +1,64 @@
+---
+title: 'Expense Tracking — Register and Manage Spending'
+description: 'Learn how to add, view, and delete expenses in GastoClaro. The monthly total and category chart update automatically every time you make a change.'
+---
+
+GastoClaro makes it easy to record every purchase or payment as it happens. The expense form on the main page is intentionally minimal — you only need a few fields to capture what you spent, so you can get in and out in seconds and stay on top of your finances without friction.
+
+## Adding an expense
+
+The expense form sits at the top of the app. Fill in each field and submit to add a new entry to your expense list.
+
+<Steps>
+  <Step title="Enter a description">
+    Type a short label for the expense — for example, "Lunch at café" or "Bus pass". This helps you recognize the entry at a glance when reviewing your list later.
+  </Step>
+  <Step title="Enter the amount">
+    Type the monetary value of the expense. Use a number without currency symbols — for example, `12.50`. GastoClaro stores amounts as plain numbers and displays them consistently across the app.
+  </Step>
+  <Step title="Choose a category">
+    Select the category that best describes the expense from the dropdown. Categories group your spending so you can see patterns over time. See [Categories](/features/categories) for the full list.
+  </Step>
+  <Step title="Set the date">
+    Pick the date the expense occurred. GastoClaro defaults to today, but you can change it to log a past expense you forgot to record.
+  </Step>
+  <Step title="Submit the form">
+    Click the **Add expense** button. The new entry appears immediately at the top of your expense list, and the monthly total updates to include the new amount.
+  </Step>
+</Steps>
+
+<Tip>
+  The form is designed for a 10-second registration target — description, amount, category, date, submit. Keeping the habit of logging expenses right after they happen is the single most effective way to maintain an accurate picture of your spending.
+</Tip>
+
+## Viewing your expense list
+
+After you add an expense, it appears in the list below the form. Each entry shows:
+
+- The description you entered
+- The amount
+- The category label
+- The date of the expense
+
+The list displays all recorded expenses for the current session. Because GastoClaro persists data through [localStorage](/features/local-storage), your list reloads automatically when you return to the app or refresh the page.
+
+## Deleting an expense
+
+If you made an error or need to remove an entry, every expense in the list has a **Delete** button next to it. Clicking it removes the expense immediately — no confirmation prompt. The monthly total and category chart both update in real time to reflect the removal.
+
+<Warning>
+  Deleting an expense is permanent. GastoClaro does not keep a trash or undo history, so double-check the entry before you delete it.
+</Warning>
+
+## Monthly total
+
+The monthly total is displayed prominently on the main page. It sums every expense recorded for the current month and recalculates automatically whenever you add or delete an entry. You do not need to refresh the page or trigger any manual update — the total stays in sync with your list at all times.
+
+<CardGroup cols={2}>
+  <Card title="Categories" icon="tag" href="/features/categories">
+    Learn about the available expense categories and how to pick the right one.
+  </Card>
+  <Card title="Data visualization" icon="chart-pie" href="/features/data-visualization">
+    See how your spending is broken down visually by category each month.
+  </Card>
+</CardGroup>

@@ -1,0 +1,37 @@
+---
+title: "GastoClaro development roadmap: MVP phases overview"
+description: "Explore the six phases of GastoClaro's MVP development — from planning and HTML structure through JavaScript logic, data persistence, and UX polish."
+---
+
+GastoClaro was built in six structured phases, taking the project from an empty repository and rough wireframes to a fully functional, browser-based expense tracker. Each phase had a clear scope — no phase was considered complete until its deliverables worked correctly in the browser. The roadmap below documents exactly what was built and when.
+
+<Info>
+  All six phases of the GastoClaro MVP are complete. The app is fully functional: you can register expenses, assign categories, view a monthly total, explore the category breakdown chart, and return to your data across sessions thanks to localStorage persistence.
+</Info>
+
+## MVP phases
+
+<Steps>
+  <Step title="Fase 0 — Preparation">
+    The project started with scoping and planning rather than code. In this phase, the MVP feature set was defined to keep the app focused and achievable. Wireframes were sketched to map out the main page layout, the expense form, the expense list, and the summary chart. The GitHub repository was created and the initial project structure was committed, giving the development a clean, version-controlled starting point.
+  </Step>
+  <Step title="Fase 1 — Base structure">
+    With the plan in place, the foundational HTML and CSS were built. This phase produced the semantic HTML structure for every page in the app — the form, the expense list container, and the summary section. The visual design was established using CSS: layout, typography, spacing, and color. By the end of this phase, GastoClaro looked like an app but had no interactive behavior yet.
+  </Step>
+  <Step title="Fase 2 — JavaScript logic">
+    This phase brought the app to life. JavaScript was added to capture form submissions, validate that all required fields are filled in correctly, and manage expenses in memory. New expenses could be added to the list and displayed on the page. Existing expenses could be deleted, with the list updating immediately. All of this happened in memory only — data was lost on page refresh — but the core interaction loop was working.
+  </Step>
+  <Step title="Fase 3 — Data persistence">
+    To make GastoClaro genuinely useful across sessions, localStorage was integrated in this phase. Expenses are now saved to the browser's localStorage every time one is added or deleted, and loaded back automatically when the page opens. The monthly total calculation was also implemented here, summing all expenses for the current month and displaying the result prominently on the page.
+  </Step>
+  <Step title="Fase 4 — Data visualization">
+    With data persisting reliably, the focus shifted to making that data meaningful at a glance. A category breakdown chart was built using JavaScript to group expenses by category and render the proportions visually. The chart updates dynamically whenever expenses are added or removed, so the visualization always reflects the current state of your data. Clear colors and a clean design were applied to make the chart easy to read without a legend.
+  </Step>
+  <Step title="Fase 5 — User experience">
+    The final phase refined everything that makes GastoClaro feel polished and trustworthy. Feedback messages were added so you know when an expense has been saved or when a form field is missing. Empty states were designed for moments when the expense list or chart has no data to show, so the app never appears broken. Responsive design was implemented to ensure GastoClaro works correctly on screens of all sizes, from desktop browsers to mobile devices.
+  </Step>
+</Steps>
+
+<Note>
+  The MVP roadmap covers the core GastoClaro experience. Future plans — including a Plus tier and Pro features beyond the free browser-based app — are documented separately. See [Plans: Plus and Pro](/plans/plus-pro) for details on what is being considered for future development.
+</Note>

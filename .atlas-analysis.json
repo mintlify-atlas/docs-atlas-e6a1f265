@@ -1,0 +1,67 @@
+{
+  "projectType": "saas",
+  "projectName": "GastoClaro",
+  "projectDescription": "A simple, browser-based personal expense tracker that helps users record daily spending, categorize purchases, and visualize monthly totals without requiring financial expertise.",
+  "theme": "almond",
+  "primaryColor": "#667eea",
+  "lightColor": null,
+  "darkColor": null,
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart"
+            ]
+          },
+          {
+            "group": "Core Features",
+            "pages": [
+              "features/expense-tracking",
+              "features/categories",
+              "features/data-visualization",
+              "features/local-storage"
+            ]
+          },
+          {
+            "group": "Plans & Pricing",
+            "pages": [
+              "plans/overview",
+              "plans/free-plan",
+              "plans/plus-pro"
+            ]
+          },
+          {
+            "group": "Project",
+            "pages": [
+              "project/about",
+              "project/roadmap",
+              "project/contact"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Manual expense registration with category tagging",
+    "Monthly expense totals calculated automatically",
+    "Visual category breakdown charts",
+    "Browser-based localStorage persistence — no account required",
+    "Responsive, mobile-friendly interface",
+    "Zero-friction onboarding — works directly in any web browser"
+  ],
+  "publicApiSurface": [
+    "Expense registration form (description, amount, category, date)",
+    "Expense list with delete functionality",
+    "Monthly total summary",
+    "Category-based pie/bar chart visualization",
+    "localStorage read/write via storage.js",
+    "UI rendering module (ui.js)",
+    "App entry point (app.js)"
+  ]
+}
